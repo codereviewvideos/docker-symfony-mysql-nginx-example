@@ -4,7 +4,6 @@ services:
 
     db:
         image: mysql:5.7.17
-        container_name: mysql_dev_crv
         env_file:
           - ./.env
         volumes:
@@ -18,7 +17,6 @@ services:
         image: codereviewvideos/nginx.dev
         ports:
           - "81:80"
-        container_name: nginx_dev_crv
         restart: always
         volumes:
           - "./volumes/nginx/logs:/var/log/nginx/"
@@ -32,7 +30,6 @@ services:
     php:
         image: codereviewvideos/www.dev
         restart: always
-        container_name: php_dev_crv
         env_file:
           - .env
         volumes:
