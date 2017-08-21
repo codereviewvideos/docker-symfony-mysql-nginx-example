@@ -36,8 +36,8 @@ services:
         env_file:
           - .env
         volumes:
-          - "./volumes/dev/app/cache:/var/www/dev/app/cache/:rw"
-          - "./volumes/dev/app/logs:/var/www/dev/app/logs/:rw"
+          - "./volumes/php/app/cache:/var/www/dev/app/cache/:rw"
+          - "./volumes/php/app/logs:/var/www/dev/app/logs/:rw"
           - "./volumes/.composer:/var/www/.composer"
           - "./app:/var/www/dev"
         networks:
