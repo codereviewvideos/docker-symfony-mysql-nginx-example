@@ -92,11 +92,11 @@ Generating autoload files
 > Incenteev\ParameterHandler\ScriptHandler::buildParameters
 Creating the "app/config/parameters.yml" file
 Some parameters are missing. Please provide them.
-database_host ('%env(DB_HOST)%'): 
-database_port ('%env(DB_PORT)%'): 
-database_name ('%env(DB_DATABASE)%'): 
-database_user ('%env(DB_USER)%'): 
-database_password ('%env(DB_PASSWORD)%'): 
+database_host ('%env(MYSQL_HOST)%'): 
+database_port ('%env(MYSQL_PORT)%'): 
+database_name ('%env(MYSQL_DATABASE)%'): 
+database_user ('%env(MYSQL_USER)%'): 
+database_password ('%env(MYSQL_PASSWORD)%'): 
 mailer_transport (smtp): 
 mailer_host ('%env(MAILER_HOST)%'): 
 mailer_user ('%env(MAILER_USER)%'): 
