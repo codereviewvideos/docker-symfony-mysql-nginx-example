@@ -8,7 +8,7 @@ git clone https://github.com/codereviewvideos/docker-symfony-mysql-nginx-example
 cd docker-symfony-mysql-nginx-example
 
 # docker user will run as www-data, a member of the www-data group
-sudo chown $(whoami):www-data -R app
+sudo chown -R $(whoami):1000 app
 
 # bring up the environment
 # this creates a ./volumes directory in the project root
@@ -18,7 +18,7 @@ make dev
 docker-compose down
 
 # make the required permissions change to the php volume
-sudo chown -R www-data:www-data volumes/php
+sudo chown -R 1000:1000 volumes/php
 
 # bring the environment back up
 make dev
